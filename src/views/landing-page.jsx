@@ -29,7 +29,7 @@ export const LandingPage = (props) => {
             <div className="fixed top-40 left-9 bottom-0 flex flex-col justify-start">
                 <div className="">
                     <p className="text-7xl tracking-widest text-blue-900 phone:text-lg phone:text-left">
-                        muddi studios
+                        Muddi studios
                     </p>
                     <div className="block pt-5 phone:pt-2">
                         {navLinks.map((link) => (
