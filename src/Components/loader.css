@@ -1,0 +1,64 @@
+/* styles.css */
+@keyframes animate {
+	0% {
+		height: 10px;
+	}
+
+	50% {
+		height: 30px;
+	}
+
+	100% {
+		height: 10px;
+	}
+}
+
+.loader-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bar {
+	width: 5px;
+	height: 10px;
+	margin: 0 2px;
+	background-color: #3e3efd;
+	animation: animate 0.5s infinite;
+}
+
+.bar1 {
+	animation-delay: 0s;
+}
+
+.bar2 {
+	animation-delay: 0.1s;
+}
+
+.bar3 {
+	animation-delay: 0.2s;
+}
+
+.bar4 {
+	animation-delay: 0.3s;
+}
+
+.bar5 {
+	animation-delay: 0.4s;
+}
+
+.bar6 {
+	animation-delay: 0.5s;
+}
+
+.bar7 {
+	animation-delay: 0.6s;
+}
+
+.bar8 {
+	animation-delay: 0.7s;
+}
+
+.bar9 {
+	animation-delay: 0.8s;
+}
