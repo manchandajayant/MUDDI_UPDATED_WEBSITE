@@ -3,60 +3,44 @@ import { Link } from "react-router-dom";
 
 export const About = () => {
     return (
-        <div className="about-container">
+        <div className="about-container  pt-4 text-sky-900 pt-[170px]">
             <head>
                 <title>About - Muddi Studio</title>
                 <meta property="og:title" content="About - Muddi Studio" />
             </head>
             <div id="heading" className="about-heading">
                 <Link to="/" className="about-text">
-                    <span className="about-text01">Muddi Studio</span>
+                    <span className="about-text01 font-semibold	text-lg">About</span>
                     <br />
                     <br />
                 </Link>
             </div>
-            <div id="about" className="about-about">
-                <span className="about-text16">
+            <div id="about" className="about-about flex flex-col gap-12 text-md">
+                <span className="about-text16 flex flex-col gap-1">
                     <span>
-                        Welcome to Muddi Studio, a boutique destination for comprehensive audio solutions, specializing
-                        in sound design and music composition. Based in Goa, our hybrid sound studio is dedicated to
-                        crafting immersive auditory experiences across various mediums.
-                        <span
-                            dangerouslySetInnerHTML={{
-                                __html: " ",
-                            }}
-                        />
+                        {" "}
+                        Welcome to Muddi, a boutique destination for sound design & music services. Planted in a quiet
+                        corner of Goa, our hybrid sound studio is dedicated to crafting immersive auditory experiences
+                        across various mediums.
+                    </span>{" "}
+                    <br></br>
+                    <span>
+                        The space was set up in an independent house in 2020 and has been meticulously transformed into
+                        a state-of-the-art recording and production facility that meets the highest commercial
+                        standards. Our team is a diverse group of in-house composers: Rohit Gupta, Aditya Kapoor, and
+                        Dhruv Bhola. Each brings a unique palette of sounds and a passion for creating evocative audio
+                        landscapes.{" "}
                     </span>
-                    <br />
-                    <br />
+                    <br></br>
                     <span>
-                        Our team is made up of a diverse group of in-house composers who are passionate about creating
-                        innovative and impactful audio branding solutions. Whether it's for film, television, video
-                        games, virtual reality, or advertising, the team utilizes cutting-edge technology and a creative
-                        approach to bring visions to life through sound.
-                    </span>
-                    <br />
-                    <br />
-                    <span>
-                        The studio is set up in an independent house as a hybrid recording, production &amp; performance
-                        studio by our in-house sound designers &amp; composers Rohit Gupta, Aditya Kapoor &amp; Dhruv
-                        Bhola.
-                        <span
-                            dangerouslySetInnerHTML={{
-                                __html: " ",
-                            }}
-                        />
-                    </span>
-                    <br />
-                    <br />
-                    <span>
-                        MUDDI has catered to our personal projects including Peter Cat Recording Co., Run! its the Kid,
-                        Dee En, Ditty, Begum plus clients from the film, advertising &amp; the art world including Royal
-                        Enfield, Netflix, Serendipity Arts festival &amp; The Audacity Collective.
+                        Whether it's for film, television, video game, virtual reality, podcasts, or advertising, we
+                        thrive on pushing the boundaries of what sound can achieve. Muddi has catered to music projects
+                        including Peter Cat Recording Co., Run! It’s the Kid, Dee En, Ditty, and Begum, as well as
+                        clients from the film, video game, advertising, and art world, including Royal Enfield, Netflix,
+                        Serendipity Arts Festival, and The Audacity Collective.
                     </span>
                 </span>
             </div>
         </div>
     );
 };
-

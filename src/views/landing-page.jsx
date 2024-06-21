@@ -4,24 +4,23 @@ import { About } from "./about";
 import { Media } from "./media";
 import { SoundCloud } from "./soundcloud";
 
-
 const navLinks = [
     { name: "media", id: 0 },
     { name: "about", id: 1 },
-    { name: "services", id: 2 },
-    { name: "soundcloud", id: 3 },
+    // { name: "services", id: 2 },
+    // { name: "soundcloud", id: 3 },
 ];
 
 export const LandingPage = (props) => {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
-    const [currentTab, setCurrentTab] = useState(0)
+    const [currentTab, setCurrentTab] = useState(0);
 
     const tabView = {
-        0:<Media/>,
-        1:<About/>, 
-        3:<SoundCloud/>
-    }
-
+        0: <Media />,
+        1: <About />,
+        3: <SoundCloud />,
+    };
+    console.log(currentTab);
     const transitionClass = "transition ease-in-out delay-150 hover:-translate-x-1 hover:scale-110 hover: duration-300";
     return (
         <div className="flex justify-end">
@@ -56,6 +55,23 @@ export const LandingPage = (props) => {
                         <p className="text-blue-900 text-lg tracking-widest phone:text-base">+919871536506</p>
                     </div>
                 </div> */}
+                {currentTab === 1 && (
+                    <div className="font-semibold text-lg flex flex-col pt-[150px] text-sky-900">
+                        <span>Contact us at : </span>
+                        <div className="flex justify-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span>muddistudios@gmail.com</span>
+                        </div>
+                        <div className="flex justify-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>+919871536506</span>
+                        </div>
+                    </div>
+                )}
             </div>
             {/* MEDIA DIV */}
             <div className="w-1/2 h-auto p-5">{tabView[currentTab]}</div>
