@@ -1,7 +1,7 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  background-color: #fff;
+  background-image: linear-gradient(to left, #F7FAFC, transparent);
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;

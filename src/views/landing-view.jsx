@@ -17,7 +17,6 @@ export const LandingView = (props) => {
     if (!count) {
         return (
             <div className="h-full w-full">
-                {" "}
                 <AudioLoader />
             </div>
         );

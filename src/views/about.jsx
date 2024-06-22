@@ -15,8 +15,8 @@ export const About = () => {
                     <br />
                 </Link>
             </div>
-            <div id="about" className="about-about flex flex-col gap-12 text-md">
-                <span className="about-text16 flex flex-col gap-1">
+            <div id="about" className="about-about flex flex-col gap-12 text-lg">
+                <span className="about-text16 flex flex-col gap">
                     <span>
                         {" "}
                         Welcome to Muddi, a boutique destination for sound design & music services. Planted in a quiet
