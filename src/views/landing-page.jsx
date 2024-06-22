@@ -26,7 +26,7 @@ export const LandingPage = (props) => {
         <div className="relative flex justify-end">
             {/* INFO DIV */}
             <div className="fixed top-40 left-9 bottom-0 flex flex-col justify-start z-50 phone:w-9/12 phone:absolute">
-                <div className="flex justify-between phone:gap-5">
+                <div className="flex justify-between phone:gap-1">
                     <div>
                         <p className="text-[9rem] tracking-widest text-blue-900 phone:text-5xl phone:text-left">
                             muddi
@@ -44,7 +44,7 @@ export const LandingPage = (props) => {
                         </div>
                     </div>
                     {currentTab === 1 && screenWidth < 800 && (
-                        <div className="font-semibold text-sm flex flex-col pt-[-250px] text-sky-900 self-center">
+                        <div className="font-semibold text-[0.655rem] flex flex-col pt-[-250px] text-sky-900 self-end">
                             <div className="flex justify-center gap-2">
                                 <span>
                                     <i className="fa-solid fa-envelope"></i>
