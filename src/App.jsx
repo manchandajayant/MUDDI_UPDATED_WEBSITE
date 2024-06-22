@@ -47,7 +47,7 @@ function App() {
 
     return (
         <div className="bg-gradient-to-l from-gray-100">
-            {renderStars}
+            {/* {renderStars} */}
             <LandingView />
         </div>
     );

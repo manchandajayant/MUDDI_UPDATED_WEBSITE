@@ -61,7 +61,7 @@ export const LandingPage = (props) => {
                     )}
                 </div>
                 {currentTab === 1 && screenWidth > 800 && (
-                    <div className="font-semibold text-lg flex flex-col pt-[150px] text-sky-900 phone:">
+                    <div className="font-semibold text-lg flex flex-col pt-[150px] text-sky-900 phone:text-base">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <i className="fa-solid fa-envelope"></i>
