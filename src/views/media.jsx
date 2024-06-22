@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import AudioLoader from "../Components/loader";
+import ScreenSizeChecker from "../Components/screen-size-checker";
 import sea from "../assets/2.gif";
 import ice from "../assets/3.gif";
 import person from "../assets/4.gif";
@@ -9,13 +10,14 @@ import netflix from "../assets/netflix.gif";
 const images = [
     { name: netflix, videoId: "4W5ocAI2O3k", mobileStyling: "phone:fixed phone:left-0 phone:w-60" },
     { name: ice, videoId: "AG0rkpICoiw", mobileStyling: "phone:fixed phone:top-64 phone:left-40 phone:w-60" },
-    { name: sea, videoId: "-nFxXNgNPiI", mobileStyling: "phone:fixed phone:top-[30rem] phone:left-0 phone:w-60" },
-    { name: person, videoId: "avlTgF5gQow", mobileStyling: "phone:fixed phone:top-[48rem] phone:left-40 phone:w-60" },
+    { name: sea, videoId: "-nFxXNgNPiI", mobileStyling: "phone:fixed phone:top-[28rem] phone:left-0 phone:w-60" },
+    { name: person, videoId: "avlTgF5gQow", mobileStyling: "phone:fixed phone:top-[40rem] phone:left-40 phone:w-60" },
 ];
 
 export const Media = (props) => {
     const [hoveredIndex, setHoveredIndex] = useState(-1);
     const [isLoaded, setIsLoaded] = useState(false);
+    const { screenWidth } = ScreenSizeChecker();
 
     useEffect(() => {
         const preloadImages = () => {
@@ -58,7 +60,11 @@ export const Media = (props) => {
                 onMouseLeave={() => setHoveredIndex(-1)}
             >
                 <div className={`${hoveredIndex === index ? "visible" : "invisible fixed"}`}>
-                    <YouTube videoId={img.videoId} containerClassName="youtube-video" />
+                    <YouTube
+                        videoId={img.videoId}
+                        containerClassName="youtube-video"
+                        opts={screenWidth < 800 ? { height: "100%", width: "100%" } : {}}
+                    />
                 </div>
                 {hoveredIndex !== index && <img src={img.name} alt={`Image ${index}`} className={`p-4 rounded-lg`} />}
             </div>

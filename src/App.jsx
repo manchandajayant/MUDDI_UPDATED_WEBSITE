@@ -1,14 +1,33 @@
 import React from "react";
 import "./App.css";
 import ScreenSizeChecker from "./Components/screen-size-checker";
+import Stars from "./Components/stars";
 import { LandingView } from "./views/landing-view";
 
 function App() {
     const { screenHeight, screenWidth } = ScreenSizeChecker();
-    return (
-        <div className="bg-gradient-to-l from-gray-100">
-            {/* Stars at Sphere Positions */}
-            {/* {spherePositions.map((pos, index) => (
+
+    // Check WebGL support
+    const isWebGLSupported = checkWebGLSupport();
+
+    function checkWebGLSupport() {
+        try {
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+            if (!context) {
+                return false;
+            }
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    // Render stars only if WebGL is supported
+    const renderStars = isWebGLSupported && (
+        <>
+            {/* Render stars at sphere positions */}
+            {spherePositions.map((pos, index) => (
                 <div
                     key={index}
                     className="absolute"
@@ -22,7 +41,13 @@ function App() {
                 >
                     <Stars />
                 </div>
-            ))} */}
+            ))}
+        </>
+    );
+
+    return (
+        <div className="bg-gradient-to-l from-gray-100">
+            {renderStars}
             <LandingView />
         </div>
     );
@@ -49,13 +74,8 @@ const spherePositions = [
 ];
 
 function getRandomNumber(min, max) {
-    // Generate a random number between 0 and 1
     const randomNumber = Math.random();
-
-    // Scale the random number to fit the range [min, max]
     const scaledNumber = randomNumber * (max - min + 1) + min;
-
-    // Use Math.floor() to round down to the nearest integer
     return Math.floor(scaledNumber);
 }
 

@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const About = () => {
     return (
-        <div className="about-container pt-4 text-sky-900 pt-[170px]">
+        <div className="about-container pt-4 text-sky-900 pt-[170px] phone:pt-[240px]">
             <head>
                 <title>About - Muddi Studio</title>
                 <meta property="og:title" content="About - Muddi Studio" />
             </head>
-            <div id="heading" className="about-heading">
+            {/* <div id="heading" className="about-heading phone:text-sm">
                 <Link to="/" className="about-text">
                     <span className="about-text01 font-semibold	text-lg">About</span>
                     <br />
                     <br />
                 </Link>
-            </div>
-            <div id="about" className="about-about flex flex-col gap-12 text-lg">
+            </div> */}
+            <div id="about" className="about-about flex flex-col gap-12 text-xl phone:text-sm pt-8">
                 <span className="about-text16 flex flex-col gap">
                     <span>
                         {" "}
