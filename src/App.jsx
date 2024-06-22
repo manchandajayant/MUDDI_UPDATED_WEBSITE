@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import ScreenSizeChecker from "./Components/screen-size-checker";
-import Stars from "./Components/stars";
 import { LandingView } from "./views/landing-view";
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     return (
         <div className="bg-gradient-to-l from-gray-100">
             {/* Stars at Sphere Positions */}
-            {spherePositions.map((pos, index) => (
+            {/* {spherePositions.map((pos, index) => (
                 <div
                     key={index}
                     className="absolute"
@@ -23,7 +22,7 @@ function App() {
                 >
                     <Stars />
                 </div>
-            ))}
+            ))} */}
             <LandingView />
         </div>
     );
