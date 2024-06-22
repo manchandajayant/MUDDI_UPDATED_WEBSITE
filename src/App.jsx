@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
+import ScreenSizeChecker from "./Components/screen-size-checker";
 import Stars from "./Components/stars";
 import { LandingView } from "./views/landing-view";
 
 function App() {
+    const { screenHeight, screenWidth } = ScreenSizeChecker();
     return (
         <div className="bg-gradient-to-l from-gray-100">
             {/* Stars at Sphere Positions */}
@@ -14,8 +16,8 @@ function App() {
                     style={{
                         top: pos.top,
                         left: pos.left,
-                        width: `350px`,
-                        height: `350px`,
+                        width: screenWidth < 800 ? `100px` : `350px`,
+                        height: screenWidth < 800 ? `100px` : `350px`,
                         zIndex: 10,
                     }}
                 >

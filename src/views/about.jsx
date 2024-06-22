@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const About = () => {
     return (
-        <div className="about-container  pt-4 text-sky-900 pt-[170px]">
+        <div className="about-container pt-4 text-sky-900 pt-[170px]">
             <head>
                 <title>About - Muddi Studio</title>
                 <meta property="og:title" content="About - Muddi Studio" />
